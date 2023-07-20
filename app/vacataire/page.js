@@ -26,12 +26,19 @@ export default function Vacataire() {
         <p className='mt-2 uppercase leading-8 text-slate-600'>
           Année universitaire 2023-2024
         </p>
-        <p className='mt-16 text-sm text-justify leading-8 text-slate-950'>
-          Nous vous invitons à remplir ce formulaire pour participer à notre
-          processus de recrutement en tant qu'enseignant vacataire pour l'année
-          universitaire 2023-2024. Ce formulaire nous permet de mieux comprendre
-          votre expérience. Nous apprécions votre intérêt pour notre institution
-          et sommes impatients de passer en revue votre candidature.
+        <p className='mt-10 text-center leading-8 text-slate-950'>
+          Bienvenue sur le formulaire de recrutement destiné aux enseignants
+          vacataires
+        </p>
+        <p className='mt-8 text-sm text-justify leading-8 text-slate-950'>
+          Ce formulaire a pour but de recueillir les informations nécessaires
+          pour votre dossier. Toutes les informations fournies seront traitées
+          avec la plus grande confidentialité et ne serviront qu'à l'évaluation
+          de votre dossier.
+        </p>
+        <p className='mt-4 text-sm text-justify leading-8 text-slate-950'>
+          Nous vous remercions de votre intérêt pour l'IPAG et de votre volonté
+          de contribuer à notre mission d'enseignement de haute qualité.
         </p>
       </div>
       <Link
