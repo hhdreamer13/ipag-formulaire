@@ -13,7 +13,7 @@ export async function pdfHandlerConferencier(formData) {
     return `${day}/${month}/${year}`;
   };
 
-  console.log(formData);
+  // console.log(formData);
 
   for (const key of fields) {
     if (key === "civilite") continue;
