@@ -21,7 +21,7 @@ const StepsIndicatorConferencier = ({ currentStep }) => {
         <div
           key={index}
           className='flex flex-col items-center'
-          // onClick={() => handleStepClick(index + 1)}
+          onClick={() => handleStepClick(index + 1)}
         >
           <div
             className={`w-8 h-8 rounded-full border border-slate-950 flex items-center justify-center ${

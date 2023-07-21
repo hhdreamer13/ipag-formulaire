@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import Image from "next/image";
 import { useFormState } from "@/utils/FormContext";
@@ -7,6 +8,7 @@ import labels from "@/public/labels";
 const SummaryVacataireForm = () => {
   const { formData, handleBack } = useFormState();
   const [isConfirmed, setIsConfirmed] = useState(false);
+  const [blobURL, setBlobURL] = useState(null);
 
   const getLabel = (fieldName) => {
     const fieldLabel = labels.find((label) => label.name === fieldName);
@@ -18,11 +20,15 @@ const SummaryVacataireForm = () => {
     const pdfBytes = await pdfDoc.save();
 
     const blob = new Blob([pdfBytes], { type: "application/pdf" });
+    const blobURL = URL.createObjectURL(blob);
+
     const link = document.createElement("a");
 
-    link.href = URL.createObjectURL(blob);
+    link.href = blobURL;
     link.download = "formulaire-vacataire-rempli.pdf";
     link.click();
+
+    setBlobURL(blobURL);
 
     setIsConfirmed(true);
   };
@@ -35,7 +41,46 @@ const SummaryVacataireForm = () => {
     <div>
       {isConfirmed ? (
         <div className='prose mt-16'>
-          <h2>Votre PDF a été téléchargé avec succès</h2>
+          <h2>Votre PDF a été généré avec succès</h2>
+          <a
+            href={blobURL}
+            download='formulaire-vacataire-rempli.pdf'
+            className='hover:text-indigo-500 mt-4 underline hover:underline'
+          >
+            Cliquez ici si le téléchargement n'a pas commencé automatiquement
+          </a>
+          <p className='mt-12 text-sm text-justify leading-8 text-slate-950'>
+            Vous avez complété le formulaire et votre dossier de recrutement au
+            format PDF a été généré avec succès. Il est nécessaire de joindre
+            toutes les pièces justificatives, qui sont indiquées dans le
+            document PDF et d'envoyer votre dossier complet (dossier de
+            recrutement avec toutes les pièces nécessaires) aux adresses mail
+            suivantes&nbsp;:
+          </p>
+          <ul className='list-disc ml-5 mt-2 text-sm text-justify leading-8 text-slate-950'>
+            <li className=''>
+              <a
+                href='mailto:leo.angioletti@u-paris2.fr'
+                className='text-blue-500 no-underline hover:underline'
+              >
+                leo.angioletti@u-paris2.fr
+              </a>
+            </li>
+            <li className=''>
+              <a
+                href='mailto:marion.doollee@u-paris2.fr'
+                className='text-blue-500 no-underline hover:underline'
+              >
+                marion.doollee@u-paris2.fr
+              </a>
+            </li>
+          </ul>
+          <a
+            href='/vacataire'
+            className='block w-40 no-underline focus:bg-indigo-700 rounded-md bg-indigo-600 px-3.5 py-2.5 mt-10 mx-auto text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+          >
+            Recommencer
+          </a>
         </div>
       ) : (
         <div className='prose'>

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 
 export default function Home() {
@@ -22,8 +23,14 @@ export default function Home() {
         <p className='mt-4 uppercase leading-8 text-slate-600'>
           Année universitaire 2023-2024
         </p>
+        <p className='mt-16 text-sm text-justify leading-8 text-slate-950'>
+          Cet espace est destiné à faciliter la gestion des informations pour
+          divers processus au sein de notre établissement. Merci d'utiliser le
+          lien spécifique que vous avez reçu de la part du secrétariat de l'IPAG
+          de Paris pour accéder et compléter le formulaire qui vous concerne.
+        </p>
       </div>
-      <div className='flex gap-6 justify-center items-center'>
+      {/* <div className='flex gap-6 justify-center items-center'>
         <Link
           href='/vacataire'
           className='block w-40 focus:bg-indigo-700 rounded-md bg-indigo-600 px-3.5 py-2.5 mt-10 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
@@ -36,7 +43,7 @@ export default function Home() {
         >
           Conférencier
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

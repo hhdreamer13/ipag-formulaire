@@ -18,15 +18,15 @@ const Navbar = () => {
     <>
       <nav className='flex items-center justify-between p-6 lg:px-8 absolute inset-x-0 top-0 z-50 overflow-hidden'>
         <div className='flex lg:flex-1'>
-          <Link href='/' className='-m-1.5 p-1.5'>
-            <Image
-              src='/ipag-logo.png'
-              width={150}
-              height={150}
-              alt='logo'
-              className='w-auto h-auto'
-            />
-          </Link>
+          {/* <Link href='/' className='-m-1.5 p-1.5'> */}
+          <Image
+            src='/ipag-logo.png'
+            width={150}
+            height={150}
+            alt='logo'
+            className='w-auto h-auto'
+          />
+          {/* </Link> */}
         </div>
         <div className='flex lg:hidden'>
           <button

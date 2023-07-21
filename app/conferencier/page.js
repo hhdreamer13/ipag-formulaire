@@ -30,18 +30,41 @@ export default function Conferencier() {
           Bienvenue sur le formulaire de recrutement destiné aux conférenciers
         </p>
         <p className='mt-8 text-sm text-justify leading-8 text-slate-950'>
-          Ce formulaire a pour but de recueillir les informations nécessaires
-          pour votre dossier. Toutes les informations fournies seront traitées
-          avec la plus grande confidentialité et ne serviront qu'à l'évaluation
-          de votre dossier.
+          Ce formulaire vise à recueillir les informations nécessaires pour
+          votre dossier. Toutes les informations fournies seront traitées avec
+          la plus grande confidentialité et ne serviront qu'à l'évaluation de
+          votre dossier.
         </p>
+        <p className='mt-4 text-sm text-justify leading-8 text-slate-950'>
+          Une fois le formulaire complété, un fichier PDF, qui constitue votre
+          dossier de recrutement, sera automatiquement généré. Il contiendra
+          l'ensemble des informations que vous aurez renseignées. Vous serez
+          alors invité.e à le télécharger et à l'envoyer, accompagné de toutes
+          les pièces justificatives requises (qui seront mentionnées dans le
+          document PDF), aux adresses mail suivantes :
+        </p>
+        <ul className='list-disc ml-5 mt-2 text-sm text-justify leading-8 text-slate-950'>
+          <li className=''>
+            <a
+              href='mailto:leo.angioletti@u-paris2.fr'
+              className='text-blue-500 hover:underline'
+            >
+              leo.angioletti@u-paris2.fr
+            </a>
+          </li>
+          <li className=''>
+            <a
+              href='mailto:marion.doollee@u-paris2.fr'
+              className='text-blue-500 hover:underline'
+            >
+              marion.doollee@u-paris2.fr
+            </a>
+          </li>
+        </ul>
         <p className='mt-4 text-sm text-justify leading-8 text-slate-950'>
           Nous vous remercions de votre intérêt pour l'IPAG et de votre volonté
           de contribuer à notre mission d'enseignement de haute qualité.
         </p>
-        {/* <p className='mt-4 text-sm text-justify leading-8 text-slate-950'>
-          Si vous êtes prêt à commencer, cliquez sur "Commencer" ci-dessous.
-        </p> */}
       </div>
       <Link
         href='/conferencier/formulaire'

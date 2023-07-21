@@ -2,6 +2,7 @@ const InputField = ({
   label,
   type,
   disabled,
+  readOnly,
   register,
   name,
   error,
@@ -18,6 +19,7 @@ const InputField = ({
       <input
         required={required}
         disabled={disabled}
+        readOnly={readOnly}
         placeholder={placeholder}
         defaultValue={defaultValue}
         type={type}
