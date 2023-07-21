@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 
 export default function Faq() {
@@ -24,8 +25,57 @@ export default function Faq() {
           Année universitaire 2023-2024
         </p>
         <h3 className='text-xl mt-16 uppercase font-bold drop-shadow-xl text-slate-700 sm:text-2xl'>
-          FAQ à venir
+          Foire aux questions
         </h3>
+        <p className='mt-10 text-center leading-8 text-slate-950'></p>
+        <p className='mt-4 text-sm text-justify leading-8 text-slate-950'>
+          Vous pouvez consulter nos deux vidéos tutorielles ci-dessous pour vous
+          aider à remplir le formulaire :
+        </p>
+        <ul className='list-disc ml-5 mt-2 text-sm text-justify leading-8 text-slate-950'>
+          <li className=''>
+            <a
+              className='text-blue-500 hover:underline'
+              href='https://youtu.be/Wu0wgAzpJYw'
+              target='_blank'
+            >
+              Comment remplir le formulaire pour les enseignants vacataires
+            </a>
+          </li>
+          <li className=''>
+            <a
+              className='text-blue-500 hover:underline'
+              href='https://youtu.be/YXMJcohpxyw'
+              target='_blank'
+            >
+              Comment remplir le formulaire pour les conférenciers
+            </a>
+          </li>
+        </ul>
+        <p className='mt-4 text-sm text-justify leading-8 text-slate-950'>
+          Vous trouverez ci-dessous le dossier de recrutement au format vierge,
+          si jamais vous préférez remplir le formulaire manuellement :
+        </p>
+        <ul className='list-disc ml-5 mt-2 text-sm text-justify leading-8 text-slate-950'>
+          <li className=''>
+            <a
+              className='text-blue-500 hover:underline'
+              href='/formulaire-vacataire.pdf'
+              target='_blank'
+            >
+              Pour les enseignants vacataires
+            </a>
+          </li>
+          <li className=''>
+            <a
+              className='text-blue-500 hover:underline'
+              href='/formulaire-conferencier.pdf'
+              target='_blank'
+            >
+              Pour les conférenciers
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
